@@ -339,7 +339,7 @@ class TinyGsmSim800 : public TinyGsmModem<TinyGsmSim800>,
     }
 
     // Define the PDP context
-    sendAT(GF("+CGDCONT=1,\"IP\",\""), apn, '"');
+    sendAT(GF("+CGDCONT=1,\"IPV4V6\",\""), apn, '"');
     waitResponse();
 
     // Activate the PDP context

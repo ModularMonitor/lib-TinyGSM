@@ -229,7 +229,7 @@ class TinyGsmM590 : public TinyGsmModem<TinyGsmM590>,
     sendAT(GF("+XISP=0"));
     waitResponse();
 
-    sendAT(GF("+CGDCONT=1,\"IP\",\""), apn, '"');
+    sendAT(GF("+CGDCONT=1,\"IPV4V6\",\""), apn, '"');
     waitResponse();
 
     if (!user) user = "";

@@ -265,7 +265,7 @@ class TinyGsmMC60 : public TinyGsmModem<TinyGsmMC60>,
     if (waitResponse() != 1) { return false; }
 
     // Define PDP context - is this necessary?
-    sendAT(GF("+CGDCONT=1,\"IP\",\""), apn, '"');
+    sendAT(GF("+CGDCONT=1,\"IPV4V6\",\""), apn, '"');
     waitResponse();
 
     // Activate PDP context - is this necessary?

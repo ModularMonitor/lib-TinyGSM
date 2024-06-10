@@ -316,7 +316,7 @@ class TinyGsmSim5360 : public TinyGsmModem<TinyGsmSim5360>,
     }
 
     // Define external PDP context 1
-    sendAT(GF("+CGDCONT=1,\"IP\",\""), apn, '"', ",\"0.0.0.0\",0,0");
+    sendAT(GF("+CGDCONT=1,\"IPV4V6\",\""), apn, '"', ",\"0.0.0.0\",0,0");
     waitResponse();
 
     // The CGSOCKCONT commands define the "embedded" PDP context for TCP/IP

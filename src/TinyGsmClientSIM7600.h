@@ -321,7 +321,7 @@ class TinyGsmSim7600 : public TinyGsmModem<TinyGsmSim7600>,
     }
 
     // Define external PDP context 1
-    sendAT(GF("+CGDCONT=1,\"IP\",\""), apn, '"', ",\"0.0.0.0\",0,0");
+    sendAT(GF("+CGDCONT=1,\"IPV4V6\",\""), apn, '"', ",\"0.0.0.0\",0,0");
     waitResponse();
 
     // Configure TCP parameters

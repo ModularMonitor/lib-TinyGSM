@@ -374,7 +374,7 @@ class TinyGsmSaraR4 : public TinyGsmModem<TinyGsmSaraR4>,
       waitResponse();
     }
 
-    sendAT(GF("+CGDCONT=1,\"IP\",\""), apn, '"');  // Define PDP context 1
+    sendAT(GF("+CGDCONT=1,\"IPV4V6\",\""), apn, '"');  // Define PDP context 1
     waitResponse();
 
     sendAT(GF("+CGACT=1,1"));  // activate PDP profile/context 1

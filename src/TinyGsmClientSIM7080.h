@@ -218,7 +218,7 @@ class TinyGsmSim7080 : public TinyGsmSim70xx<TinyGsmSim7080>,
     gprsDisconnect();
 
     // Define the PDP context
-    sendAT(GF("+CGDCONT=1,\"IP\",\""), apn, '"');
+    sendAT(GF("+CGDCONT=1,\"IPV4V6\",\""), apn, '"');
     waitResponse();
 
     // Attach to GPRS

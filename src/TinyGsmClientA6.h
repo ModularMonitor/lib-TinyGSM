@@ -231,7 +231,7 @@ class TinyGsmA6 : public TinyGsmModem<TinyGsmA6>,
 
     // TODO(?): wait AT+CGATT?
 
-    sendAT(GF("+CGDCONT=1,\"IP\",\""), apn, '"');
+    sendAT(GF("+CGDCONT=1,\"IPV4V6\",\""), apn, '"');
     waitResponse();
 
     if (!user) user = "";
